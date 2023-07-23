@@ -1,0 +1,132 @@
+/* google fonts   */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: rgb(255, 87, 87);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--Light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: var(--White);
+  border-radius: 10px 10px 30% 10px;
+  position: relative;
+}
+.container__ages-input {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+
+.container__ages-input__day label {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.container__ages-input__day input {
+  width: 70%;
+  outline: none;
+  background: transparent;
+  border: 2px solid var(--Light-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.day-input {
+  width: 70%;
+  outline: none;
+  background: transparent;
+  border: 2px solid var(--Light-grey);
+  display: block;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+::placeholder {
+  font-weight: 700;
+  color: var(--Smokey-grey);
+}
+.container__age-details {
+  margin: 0 2rem;
+}
+.container__age-details h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--Off-black);
+}
+.container__age-details h2 span {
+  color: var(--Purple);
+}
+.error {
+  color: var(--Light-red);
+  font-size: 12px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  margin: 3rem 2rem;
+}
+.div {
+  width: 85%;
+  height: 1px;
+  background-color: var(--Light-grey);
+}
+.btns {
+  background: var(--Purple);
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+}
+.btn .btns img {
+  width: 50%;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 400px;
+    padding: 10px 30px;
+  }
+  .container__ages-input .year-input {
+    width: 100%;
+  }
+  .container__ages-input__day label {
+    font-size: 1.3rem;
+  }
+  .btns {
+    left: 38%;
+  }
+}
